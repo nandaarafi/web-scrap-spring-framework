@@ -12,3 +12,31 @@ The project can be broken down into three major components:
 - Web Scraping and client post api in python folder 
 - Palindrome string in com.example.rafi.crud_imdb.palindrome.PalindromeChecker
 - CRUD database Spring Framework with PostgreSQL driver, 
+
+## How to run, PS: this is using windows cli
+### How Run the java spring framework server
+First setup the PostgreSQL database using docker compose
+```
+docker-compose up
+```
+run the java spring framework project
+```
+mvn spring-boot:run
+```
+## How to run the web scraping
+- Install the browser driver first, for example for chrome
+https://developer.chrome.com/docs/chromedriver/downloads 
+
+- install the requirements first
+```
+pip install -r python\requirements.txt
+```
+- run the scraping imdb movie that have 100 top movies data
+```
+python .\python\imdb_scrape.py
+```
+
+- Post Request to insert the data into the database
+```
+python .\python\client.py
+```
